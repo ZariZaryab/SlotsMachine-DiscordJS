@@ -1,6 +1,6 @@
 {
 "token": "YOUR_TOKEN_HERE",
-"haveAnimation": "Change_To_1_If_Have",
+"haveEmoji": "Change to 1 if you have custom animation",
 "emojiname": "Your_Animation_Emoji_Name",
 "emojiid": "Your_Animation_Emoji_ID"
 }
