@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
-const config = require(./config.json);
+const config = require("./config.json");
 
 /* BOT READY */
 bot.on("ready", async () => {
@@ -87,6 +87,7 @@ if($ === $$ && $$ === $$$) {
     // user.removeBalance(msg.author.id, 69)
    msg.channel.send("You lost!")
  }, 2000);
+}
 }
 })
 
