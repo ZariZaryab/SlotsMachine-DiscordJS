@@ -21,7 +21,7 @@ if(message.content === '+slot') {
 
 /* SPIN ANIMATION (use own or check mine)*/
 const slotemoji = "<:money_mouth:>";
-const customemoji = "<a:"+ config.name +":"+ config.id + ">";
+const customemoji = "<a:"+ config.emojiname +":"+ config.emojiid + ">";
 if(config.haveEmoji === '1') slotemoji = customemoji;
 
 /* ITEMS (SLOTS) */
