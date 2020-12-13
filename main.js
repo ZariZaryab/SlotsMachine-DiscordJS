@@ -75,18 +75,25 @@ const $3 = new Discord.MessageEmbed()
   
 /* DEDUCT RESULTS */
 // You can add/remove user balance in respective result (if using some currency system)
-if($ === $$ && $$ === $$$) {
+
+if($$ !== $ && $$ !== $$$) {
+    money.updateBal(msg.author.id, '-5000').then((i) => {
    
  setTimeout(() => {
-   msg.channel.send("You won!")
-  // user.addBalance(msg.author.id, 69)
+   msg.channel.send("You LOST and payed all boot for electric bill. Now you have `"+cn(i.money)+" coins`")
  }, 2000);
-} else {
-  
+    })
+    
+} else if($ === $$ && $ === $$$) {
+  money.updateBal(msg.author.id, '10000').then((i) => {
+     
+   
  setTimeout(() => {
-    // user.removeBalance(msg.author.id, 69)
-   msg.channel.send("You lost!")
+   msg.channel.send("You WON and received `"+winboot+"`! Now you have `"+cn(i.money)+" coins`")
  }, 2000);
+   })
+} else {
+  msg.channel.send("2 slots are equal!")
 }
 }
 })
