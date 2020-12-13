@@ -2,14 +2,17 @@ const Discord = require('discord.js');
 const bot = new Discord.Client()
 const config = require(./config.json);
 
+/* BOT READY */
 bot.on("ready", async () => {
-  console.log(`Your bot playing slots on ${bot.guilds.size} servers!`);
+  console.log(`Your bot is playing slots on ${bot.guilds.size} servers!`);
 
   bot.user.setActivity("Slots by Gazarino#9899", {type: "PLAYING"});
 });
 
-/* ONE COMMAND */
+/* ONE COMMAND BY DEFAULT */
 bot.on("message", async message => {
+
+const msg = message;
 /* AVOID BAD PEEPS */
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
