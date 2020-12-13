@@ -4,7 +4,7 @@ const config = require("./config.json");
 
 /* BOT READY */
 bot.on("ready", async () => {
-  console.log(`Your bot is playing slots on ${bot.guilds.size} servers!`);
+  console.log(`Your bot is dealing slots and running!`);
 
   bot.user.setActivity("Slots by Gazarino#9899", {type: "PLAYING"});
 });
@@ -20,7 +20,7 @@ const msg = message;
 if(message.content === '+slot') {
 
 /* SPIN ANIMATION (use own or check mine)*/
-const slotemoji = "<:money_mouth:>";
+const slotemoji = ":money_mouth:";
 const customemoji = "<a:"+ config.emojiname +":"+ config.emojiid + ">";
 if(config.haveEmoji === '1') slotemoji = customemoji;
 
