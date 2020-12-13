@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
-const token = require(./config.json);
+const config = require(./config.json);
 
 bot.on("ready", async () => {
   console.log(`Your bot playing slots on ${bot.guilds.size} servers!`);
@@ -17,7 +17,10 @@ bot.on("message", async message => {
 if(message.content === '+slot') {
 
 /* SPIN ANIMATION (use own or check mine)*/
-const slotemoji = "<:money_mouth:>"
+const slotemoji = "<:money_mouth:>";
+const customemoji = "<a:"+ config.name +":"+ config.id + ">";
+if(config.haveEmoji === '1') slotemoji = customemoji;
+
 /* ITEMS (SLOTS) */
 
 let items = ['💵','💍','💯']; 
